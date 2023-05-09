@@ -485,13 +485,62 @@
       </div>
     </footer>
     <!-- Modal-window -->
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop" data-modal>
       <div class="modal">
         <button class="modal-close-btn" type="button" data-modal-close>
           <svg class="modal-close-icon" width="8" height="8">
             <use href="./images/icons.svg#icon-close-black-icon"></use>
           </svg>
         </button>
+        <form action="" class="modal-form">
+          <p class="modal-title-message">
+            Leave your contacts and we will call you back
+          </p>
+          <label class="modal-form-field">
+            <span class="modal-form-field-descr">Name</span>
+            <input
+              class="modal-form-input name"
+              type="text"
+              name="Name"
+              required
+              pattern="[a-zA-Zа-яА-Я]+"
+              minlength="2"
+            />
+          </label>
+          <label class="modal-form-field">
+            <span class="modal-form-field-descr">Phone</span>
+            <input
+              class="modal-form-input"
+              type="tel"
+              name="Phone"
+              required
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+              title="xxx-xxx-xx-xx"
+            />
+          </label>
+          <label class="modal-form-field">
+            <span class="modal-form-field-descr">Email</span>
+            <input class="modal-form-input" type="email" name="email" />
+          </label>
+          <label class="modal-form-field-descr for="modal-comment" >Comment</label>
+          <textarea
+            class="modal-comment"
+            name=""
+            id="modal-comment"
+            placeholder="Text input"
+          ></textarea>
+          <input
+            type="checkbox"
+            name="check-policy"
+            id="form-check"
+            class="modal-form-check"
+          />
+          <label class="modal-form-check-descr" for="form-check">
+            I accept the terms and conditions of the
+            <a href="">Privacy policy</a>
+          </label>
+          <button type="submit">Send</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
