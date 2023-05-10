@@ -66,7 +66,7 @@
       </section>
       <section class="section value-section">
         <div class="container">
-          <h2 class="title-description" hidden>The main features</h2>
+          <h2 class="title-description visually-hidden">The main features</h2>
 
           <ul class="list values-cont">
             <li class="value-item strategy">
@@ -482,6 +482,27 @@
             </li>
           </ul>
         </div>
+        <div>
+          <p class="subscribe-msg">Subscribe</p>
+          <form class="subscribe-form">
+            <label for="e-mail-subcription"></label>
+            <input
+              class="subscription-field"
+              type="email"
+              id="e-mail-subcription"
+              name="e-mail-subcription"
+              placeholder="E-mail"
+            />
+            <div class="subscribe-btn-wrapper">
+              <button class="subscribe-btn" type="submit">
+                Subscribe
+                <svg class="subscribe-btn-icon" width="24" height="20">
+                  <use href="./images/icons.svg#icon-send-1"></use>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </footer>
     <!-- Modal-window -->
@@ -492,54 +513,87 @@
             <use href="./images/icons.svg#icon-close-black-icon"></use>
           </svg>
         </button>
-        <form action="" class="modal-form">
+        <form class="modal-form">
           <p class="modal-title-message">
             Leave your contacts and we will call you back
           </p>
-          <label class="modal-form-field">
-            <span class="modal-form-field-descr">Name</span>
+          <label class="modal-form-field"> </label>
+          <span class="modal-form-field-descr">Name</span>
+          <div class="form-field-wrapper">
             <input
-              class="modal-form-input name"
+              class="modal-form-input"
               type="text"
               name="Name"
               required
               pattern="[a-zA-Zа-яА-Я]+"
               minlength="2"
             />
-          </label>
+            <svg class="form-field-icon" width="12" height="12">
+              <use href="./images/icons.svg#icon-person-black-22"></use>
+            </svg>
+          </div>
+
           <label class="modal-form-field">
             <span class="modal-form-field-descr">Phone</span>
-            <input
-              class="modal-form-input"
-              type="tel"
-              name="Phone"
-              required
-              pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
-              title="xxx-xxx-xx-xx"
-            />
+            <span class="form-field-wrapper">
+              <input
+                class="modal-form-input"
+                type="tel"
+                name="Phone"
+                required
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+                title="xxx-xxx-xx-xx"
+              />
+              <svg class="form-field-icon" width="13" height="13">
+                <use
+                  class="test-icon-field"
+                  href="./images/icons.svg#icon-phone"
+                ></use>
+              </svg>
+            </span>
           </label>
           <label class="modal-form-field">
             <span class="modal-form-field-descr">Email</span>
-            <input class="modal-form-input" type="email" name="email" />
+            <span class="form-field-wrapper">
+              <input class="modal-form-input" type="email" name="email" />
+              <svg class="form-field-icon" width="15" height="12">
+                <use
+                  class="test-icon-field"
+                  href="./images/icons.svg#icon-email-new"
+                ></use>
+              </svg>
+            </span>
           </label>
-          <label class="modal-form-field-descr for="modal-comment" >Comment</label>
+          <label class="modal-form-field" for="modal-text-message"></label>
+          <span class="modal-form-field-descr">Comment</span>
           <textarea
             class="modal-comment"
-            name=""
-            id="modal-comment"
+            name="modal-comment"
+            id="modal-text-message"
             placeholder="Text input"
           ></textarea>
           <input
             type="checkbox"
             name="check-policy"
             id="form-check"
-            class="modal-form-check"
+            class="modal-form-check visually-hidden"
           />
           <label class="modal-form-check-descr" for="form-check">
-            I accept the terms and conditions of the
-            <a href="">Privacy policy</a>
+            <span class="modal-form-fake-checkbox">
+              <svg width="10" height="8">
+                <use
+                  href="./images/icons.svg#icon-check-1"
+                  class="fake-checkbox-icon"
+                ></use>
+              </svg>
+            </span>
+            I accept the terms and conditions of the&nbsp;<a
+              class="policy-link"
+              href=""
+              >Privacy policy</a
+            >
           </label>
-          <button type="submit">Send</button>
+          <button class="send-modal-btn" type="submit">Send</button>
         </form>
       </div>
     </div>
