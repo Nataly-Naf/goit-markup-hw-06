@@ -813,8 +813,10 @@ box-shadow: 0px 1px 6px 0px #2E2F4214;
   position: relative;
 }
 .form-field-icon{
-  display: block;
-  box-sizing: border-box;
+   display: block;
+  padding: 0;
+  margin: 0;
+  box-sizing: content-box;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -850,6 +852,9 @@ box-shadow: 0px 1px 6px 0px #2E2F4214;
 }
 
 .modal-form-fake-checkbox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
     width: 16px;
   height: 16px;
  background-color: white;
@@ -869,7 +874,7 @@ box-shadow: 0px 1px 6px 0px #2E2F4214;
 
 }
 .fake-checkbox-icon{
-    fill: rgba(244, 244, 253, 1);      
+     fill: rgba(244, 244, 253, 1);      
 }
 .modal-form-check:checked + .modal-form-check-descr .modal-form-fake-checkbox{
   background-color: #404BBF;  
